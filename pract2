@@ -1,0 +1,117 @@
+# WORKSHEET 2: DATA TYPES; NUMERIC TYPES
+
+# print(type(3))
+
+# my_grade = 60
+# print(type(my_grade))
+
+# print(type(-64))
+
+# print(type(53.21))
+
+# price = 15.0
+# print(type(price))
+
+# print(type("hello"))
+
+# up_number = '2263133'
+# print(type(up_number))
+
+# print(type(False))
+
+# maths_is_fun = not True
+# print(type(maths_is_fun))
+
+import math
+
+# x_1 = 1
+# y_1 = 2
+# x_2 = 4
+# y_2 = 6
+#
+# slope = (y_2 - y_1) / (x_2 - x_1)
+# print("Slope:", slope)
+#
+# distance = ((x_2 - x_1) ** 2 + (y_2 - y_1) ** 2) ** 0.5
+# print("Distance:", distance)
+
+#Anything below this line are the programming exercises for Worksheet 2
+
+# 1. Write a function speed_calculator that asks the user for two integers: the distance travelled in km (kilometres) and the duration of the journey in hours. speed_calculator should then output the average speed in kilometres per hour (km/h).  The relevant formula is:
+# speed = distance/duration
+def speed_calculator():
+    distance = float(input("Enter the distance travelled in km: "))
+    duration = float(input("Enter the duration of the journey in hours: "))
+
+    speed = distance / duration
+    print("The average speed is ", speed, "km/h")
+
+# 2. Write a function circumference_of_circle that asks the user for the radius of a circle. The function should then output (print) the circle’s circumference.  Use the following formula. π is the pi constant from the math module, which you should import at the top of pract2.py.
+def circumference_of_circle():
+    radius = float(input("Enter the radius of a circle: "))
+
+    circumference = 2 * math.pi * radius
+    print("The circumference of the circle is ", circumference)
+
+# 3. Write a function area_of_circle that asks the user for the radius of a circle. It should then output the circle’s area.
+def area_of_circle():
+    radius = float(input("Enter the radius of a circle: "))
+
+    area = math.pi * radius ** 2
+    print("The area of the circle is ", area)
+
+# 4. Write a function cost_of_pizza that asks the user for the diameter of a pizza (in cm). Your function should then output the cost of the pizza (based on its area) in pounds. Assume that the cost of the ingredients is 3.5 pence per square cm.
+def cost_of_pizza():
+    diameter = float(input("Enter the diameter of the pizza in cm: "))
+
+    radius = diameter / 2
+    area = math.pi * radius ** 2
+    cost = 3.5
+    area_cost = area * cost
+
+    print("The cost of the pizza is ", area_cost, "pence")
+
+# 5. Write a function slope_of_line that first asks the user for four values x_1, y_1, x_2 and y_2 that represent two points in two-dimensional space (i.e. points with coordinates (x_1, y_1) and (x_2, y_2)). The function should then output the slope of the line that connects them.
+def slope_of_line():
+    x_1 = float(input("Please input x_1: "))
+    y_1 = float(input("Please input y_1: "))
+    x_2 = float(input("Please input x_2: "))
+    y_2 = float(input("Please input y_2: "))
+
+    slope = (y_2 - y_1) / (x_2 - x_1)
+
+    print("The slope of the line is ", slope)
+
+# 6. Write a function distance_between_points that asks the user for four values x_1, y_1, x_2 and y_2 that represent two points in two-dimensional space, and then outputs the distance between them.
+def distance_between_points():
+    x_1 = float(input("Please input x_1: "))
+    y_1 = float(input("Please input y_1: "))
+    x_2 = float(input("Please input x_2: "))
+    y_2 = float(input("Please input y_2: "))
+
+    distance = ((x_2 - x_1) ** 2 + (y_2 - y_1) ** 2) ** 0.5
+
+    print("The distance between the points is ", distance)
+
+# 7. Write a function travel_statistics which asks the user to input the average speed (in km/hour) and duration (in hours) of a car journey. The function should then output the overall distance travelled (in km), and the amount of fuel used (in litres) assuming a fuel efficiency of 5 km/litre.
+def travel_statistics():
+    speed = float(input("Enter the average speed of the car journey in km/h: "))
+    duration = float(input("Enter the duration of the car journey in hours: "))
+
+    distance_travelled = speed * duration
+    fuel_used = distance_travelled / 5
+
+    print("The overall distance travelled in km is ", distance_travelled)
+    print("The amount of fuel used in litres is ", fuel_used)
+
+# 8. Write a function sum_of_squares that uses a loop to output the sum 12 + 22 + … + n2 where n is an integer provided by the user.
+def sum_of_squares():
+    n_input = int(input("Enter the number you want n to be: "))
+    total_sum = 0
+
+    for i in range(1, n_input + 1):
+        total_sum += i ** 2
+
+    print("The sum of squares is ", total_sum)
+
+
